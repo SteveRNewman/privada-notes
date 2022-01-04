@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "vast-alcove-321800",
+  "private_key_id": "c0b6cc2ded16fda73be620d230cb1579a5558986",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCsVmUuMmwVHJLl\nsMSNsgUZKtl4oonHOCyDhcut8D/UW5/kUu/bynj9oxZdmM/SQajdvCoa8VDaHttM\nfoKZgyla1s6yW/p3JYQ/TOkVkfWS3yHJIv+iczo8TxI828FW7xjgWfiRjpJORNxX\nr4apiB3FsR/aBYpYSbrxCVuZeLVUGyOMVtsWV4wD6aTHQHLdX5p1nPo+UsVr8OhV\nR1NjURcF0TteK+rUlClzW0Pjc4Y6Hkkt1X63+rTQXUdzpwzrkJTGCEiIcYYajAVp\nU/gJaDMyJBFi96IZNJ12/iEFXOnCduBCKEPQ7Xo8KvugNjL7I4ronlcYM4CdBsJ2\npDWZq+oxAgMBAAECggEADSlH7uBA6tfUzB/U0vFufD6Ofy0CkqlSlPTJ2k3HwiMB\nMgG3ebSbytsCoUFDVc5X5B8zo/0b7JyAqPXcaXbf2KUhAfQOS70cvWzVPCV6eK37\nuY2nsjNUljh/rxAlUstNvgyA9DTMLZgKr9Oi2B2iEG/3e8ICj72JvlC1oyHZz0Nn\nBn3EFB9fpTH29+FflTCWQOKVXyxSnTz9R+3HYpJP6KaA+sotXgSUtHgtTQoc5ODK\nfISrG/6Dkeu74EjbFdAA8Q+4XXXRLGHKYnUMX80EodgF4ZFlj2s/TjJrtY397MVg\n2VyX56zQD5DG5A9+/60sMP5HD2LgRK12T0JVGOImQQKBgQDr0HwquSX6foLZ0z/P\n37JPzqFkWeFDmt+1w8wlMu1l2c4nMl7ifq6bzTryNy/+VwksMxsWg+BrYzizXweK\nDPlQzQ22sDozHWQtPk4TabnEj+L5/uFeBFOGRMqgHFfTDD4uDRFW9UMSoGZEt2Zj\nMIZqWMb5d8ZwXHIGqHhWlJ+jKQKBgQC7FujuKFVvh3ep3iT61foLGewtM/7XnaG3\ntoKHoWSJe3nqn4rwsd1vUKmdQoSYdbDx8olSvP8L+W27T49uemK/i3yEYhql/khj\nE16/SvV0rSqmrgi0dwszQQxhJeb9GS3SIzdJ72xtAspeYQr85VsZzT8/Do2CcHhY\nvonDIe83yQKBgBxTLpbzJlywVYdUmJWfiQuNBlXHdgdo0vZCToMpWtqhDuImar9J\n+C8+t5XgiyNB0Rg+C0LpFEvR3z2sbHtok4nhF4SaJmN9ZEsK8NXkHSw/HERrGSbx\n3haCrNQOk34GOnHNoAeR7jyOh7o5TVMcwQiFIWFVwcA9WnTyR4Ie2A4BAoGAc+g7\nouCGHbSVpD2mN2i9oocK1O5zoe1ctU5zC8gnWy2OWJdDIt9uynn0uyLstu+jEiIq\nhYHlmOuM2hDuUYmtB/JI0FNfIxuoiQkFGAo+i2yFEgKcDgH6hGR2YPF0a7Vft+Jt\nbHbSe67Q5SvF/OuzRwbregtwDDHVvVU+UBAD/lECgYA9x2YQ2KH6zxJuN2zBCtKX\nX313z67vQHlbmApfBfATj+iaewfPUYgyE+Qlwzj+KFCmT0CB7G7xRXv0pnfZiqpm\nJMwij03oJbv5YDkGzflGEzKxbtor09TMd1jcpnIG070uVzhK20SpGM0Cim4bYauz\nTZNwHOmBJ+w+GmgiUdxSJw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-pmkft@vast-alcove-321800.iam.gserviceaccount.com",
+  "client_id": "116646686998140783437",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-pmkft%40vast-alcove-321800.iam.gserviceaccount.com"
+}
