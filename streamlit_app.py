@@ -14,11 +14,21 @@ if action == "Submit Notes":
         st.text_input(label='Cigar Two')
         st.text_input(label='Cigar Three')
         st.text_input(label='Cigar Four')
-        uploaded_files = st.file_uploader("Choose Notes Images", accept_multiple_files=True)
-        for uploaded_file in uploaded_files:
-            bytes_data = uploaded_file.read()
-            st.write("filename:", uploaded_file.name)
+        uploaded_file_f = st.file_uploader("Choose Notes Front")
+        if uploaded_file_f is not None:
+        # To read file as bytes:
+            bytes_data = uploaded_file_f.getvalue()
             st.write(bytes_data)
+        uploaded_file_b = st.file_uploader("Choose Notes Back")
+        if uploaded_file_b is not None:
+        # To read file as bytes:
+            bytes_data = uploaded_file_b.getvalue()
+            st.write(bytes_data) 
+        # uploaded_files = st.file_uploader("Choose Notes Front", accept_multiple_files=False)
+        # for uploaded_file in uploaded_files:
+        #     bytes_data = uploaded_file.read()
+        #     st.write("filename:", uploaded_file.name)
+        #     st.write(bytes_data)
         submit_button = st.form_submit_button(label='Submit')
 
 if action == "Search Notes":
@@ -61,8 +71,8 @@ if action == "Search Notes":
             st.image('flower4.png')
 if action == "View Archive":
     df = pd.DataFrame(
-    np.random.randn(50, 7),
-    columns=('Subscription Type', "Year", 'Month', 'Cigar 1', "Cigar 2", 'Cigar 3', 'Cigar 4'))
+    np.random.randn(25, 9),
+    columns=('Subscription', "Year", 'Month', 'Cigar 1', "Cigar 2", 'Cigar 3', 'Cigar 4', 'Notes Front', 'Notes Back'))
 
     st.dataframe(df)
 # def save_uploadedfile(uploadedfile):
