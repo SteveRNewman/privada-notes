@@ -17,15 +17,43 @@ if action == "Submit Notes":
         submit_button = st.form_submit_button(label='Submit')
 
 if action == "Search Notes":
-    st.selectbox ("Cigar", ['Cigar 1','Cigar 2','Cigar 3', 'Cigar 4'],key=4)
-    with open("flower.png", "rb") as file:
-     btn = st.download_button(
-             label="Download image",
-             data=file,
-             file_name="flower.png",
-             mime="image/png"
-           )
-    st.image('flower.png')
+    search = st.selectbox ("Cigar", ['Cigar 1','Cigar 2','Cigar 3', 'Cigar 4'],key=4)
+    if search == 'Cigar 1':
+        with open("flower.png", "rb") as file:
+            btn = st.download_button(
+                    label="Download image",
+                    data=file,
+                    file_name="flower.png",
+                    mime="image/png"
+                )
+            st.image('flower.png')
+    if search == 'Cigar 2':
+        with open("flower2.png", "rb") as file:
+            btn = st.download_button(
+                    label="Download image",
+                    data=file,
+                    file_name="flower2.png",
+                    mime="image/png"
+                )
+            st.image('flower2.png')
+    if search == 'Cigar 3':
+        with open("flower3.png", "rb") as file:
+            btn = st.download_button(
+                    label="Download image",
+                    data=file,
+                    file_name="flower3.png",
+                    mime="image/png"
+                )
+            st.image('flower3.png')
+    if search == 'Cigar 4':
+        with open("flower4.png", "rb") as file:
+            btn = st.download_button(
+                    label="Download image",
+                    data=file,
+                    file_name="flower4.png",
+                    mime="image/png"
+                )
+            st.image('flower4.png')
 # def save_uploadedfile(uploadedfile):
 #     with open(os.path.join('Data', uploadedfile.name), 'wb') as f:
 #      f.write(uploadedfile.getbuffer())
