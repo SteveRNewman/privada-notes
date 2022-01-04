@@ -1,5 +1,10 @@
 import streamlit as st
-action = st.radio('Action', ['Submit Notes', "Search Notes"])
+import pandas as pd
+import numpy as np
+
+
+
+action = st.radio('Action', ['Submit Notes', "Search Notes","View Archive"])
 if action == "Submit Notes":
     with st.form('Form1'):
         st.selectbox('Subscription Type', ['Privada Box', 'Farm Rolled', "Brian's Box",'Test Blends'], key=1)
@@ -54,6 +59,12 @@ if action == "Search Notes":
                     mime="image/png"
                 )
             st.image('flower4.png')
+if action == "View Archive":
+    df = pd.DataFrame(
+    np.random.randn(50, 7),
+    columns=('Subscription Type', "Year", 'Month', 'Cigar 1', "Cigar 2", 'Cigar 3', 'Cigar 4'))
+
+    st.dataframe(df)
 # def save_uploadedfile(uploadedfile):
 #     with open(os.path.join('Data', uploadedfile.name), 'wb') as f:
 #      f.write(uploadedfile.getbuffer())
