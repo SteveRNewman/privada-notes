@@ -56,7 +56,7 @@ if action == "Submit Notes":
         if submit:
             df2 = pd.DataFrame([[sub,year,month,c1,c2,c3,c4,c4,c4]], columns=('Subscription', "Year", 'Month', 'Cigar 1', "Cigar 2", 'Cigar 3', 'Cigar 4','Front','Back'))#,uff,ufb])
             bytes_to_write = df2.to_csv(None).encode()
-            fs = s3fs.S3FileSystem(key=key, secret=secret)
+            fs = s3fs.S3FileSystem(anon=False)
             with fs.open('s3://privada-df/privada_data.csv', 'wb') as f:
                 f.write(bytes_to_write)
 
