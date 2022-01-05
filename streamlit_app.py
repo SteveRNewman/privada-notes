@@ -61,7 +61,22 @@ if action == "Submit Notes":
                 f.write(bytes_to_write)
 
     st.write("Archive of notes already submitted can be sorted by clicking on the column name.")
-    st.dataframe(df2, width=2000)
+    # Create connection object.
+    # `anon=False` means not anonymous, i.e. it uses access keys to pull data.
+    fs = s3fs.S3FileSystem(anon=False)
+
+    # Retrieve file contents.
+    # Uses st.cache to only rerun when the query changes or after 10 min.
+    @st.cache(ttl=600)
+    def read_file(filename):
+        with fs.open(filename) as f:
+            return f.read().decode("utf-8")
+
+    content = read_file("privada-df/privada_data.csv")
+
+    # Print results.
+
+    st.dataframe(content, width=2000)
 
 if action == "Search Notes":
     search = st.selectbox ("Cigar", ['Cigar 1','Cigar 2','Cigar 3', 'Cigar 4'],key=4)
