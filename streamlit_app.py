@@ -55,10 +55,11 @@ if action == "Submit Notes":
         submit = st.form_submit_button(label='Submit')
         if submit:
             df2 = pd.DataFrame([[sub,year,month,c1,c2,c3,c4,c4,c4]], columns=('Subscription', "Year", 'Month', 'Cigar 1', "Cigar 2", 'Cigar 3', 'Cigar 4','Front','Back'))#,uff,ufb])
-            bytes_to_write = df2.to_csv(None).encode()
-            fs = s3fs.S3FileSystem(anon=False)
-            with fs.open('s3://privada-df/privada_data.csv', 'wb') as f:
-                f.write(bytes_to_write)
+        s3 = s3fs.S3FileSystem(anon=False)
+
+        # Use 'w' for py3, 'wb' for py2
+        with s3.open('privada-df/privada_data.csv','w') as f:
+            df2.to_csv(f)
 
     st.write("Archive of notes already submitted can be sorted by clicking on the column name.")
     # Create connection object.
@@ -70,13 +71,15 @@ if action == "Submit Notes":
     @st.cache(ttl=600)
     def read_file(filename):
         with fs.open(filename) as f:
-            return f.read().decode("utf-8")
+            return f.read()#.decode("utf-8")
 
     content = read_file("privada-df/privada_data.csv")
 
     # Print results.
 
     st.dataframe(content, width=2000)
+
+    
 
 if action == "Search Notes":
     search = st.selectbox ("Cigar", ['Cigar 1','Cigar 2','Cigar 3', 'Cigar 4'],key=4)
